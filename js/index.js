@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM \n Is \n Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -42,12 +42,12 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 // nav bar
 const navList = document.querySelectorAll('a');
-navList[0].textContent = 'Services';
-navList[1].textContent = 'Product';
-navList[2].textContent = 'Vision';
-navList[3].textContent = 'Features';
-navList[4].textContent = 'About';
-navList[5].textContent = 'Contact';
+navList[0].textContent = siteContent['nav']['nav-item-1'];
+navList[1].textContent = siteContent['nav']['nav-item-2'];
+navList[2].textContent = siteContent['nav']['nav-item-3'];
+navList[3].textContent = siteContent['nav']['nav-item-4'];
+navList[4].textContent = siteContent['nav']['nav-item-5'];
+navList[5].textContent = siteContent['nav']['nav-item-6'];
 console.log(navList);
 
 // cta section
@@ -56,3 +56,9 @@ console.log(navList);
  let header = document.getElementById("cta-img");
  header.setAttribute('src', siteContent ["cta"]["img-src"])
 //headerSec.setAttribute ("src", siteContent ["cta"] ["img-src"]);
+let ctaText = document.querySelector('h1');
+ctaText.innerText = siteContent['cta']['h1'];
+let btnText = document.querySelector('button');
+btnText.innerText = siteContent['cta']['button'];
+
+
