@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street \n Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -55,10 +55,44 @@ console.log(navList);
 //console.log(headerSec);
  let header = document.getElementById("cta-img");
  header.setAttribute('src', siteContent ["cta"]["img-src"])
-//headerSec.setAttribute ("src", siteContent ["cta"] ["img-src"]);
+
 let ctaText = document.querySelector('h1');
 ctaText.innerText = siteContent['cta']['h1'];
+
 let btnText = document.querySelector('button');
 btnText.innerText = siteContent['cta']['button'];
 
+//main content
 
+const contentHeaders = document.querySelectorAll('h4');
+const contentPara = document.querySelectorAll ('p');
+const contentImg = document.getElementById("middle-img");
+contentImg.setAttribute('src', siteContent ["main-content"]["middle-img-src"]);
+
+console.log(contentHeaders);
+
+contentHeaders[0].textContent = siteContent['main-content']['features-h4'];
+contentPara[0].innerHTML = siteContent['main-content']['features-content'];
+
+contentHeaders[1].textContent = siteContent['main-content']['about-h4'];
+contentPara[1].innerHTML = siteContent['main-content']['about-content'];
+
+contentHeaders[2].textContent = siteContent['main-content']['services-h4'];
+contentPara[2].innerHTML = siteContent['main-content']['services-content'];
+
+contentHeaders[3].textContent = siteContent['main-content']['product-h4'];
+contentPara[3].innerHTML = siteContent['main-content']['product-content'];
+
+contentHeaders[4].textContent = siteContent['main-content']['vision-h4'];
+contentPara[4].innerHTML = siteContent['main-content']['vision-content'];
+
+//contact
+
+contentHeaders[5].textContent = siteContent['contact']['contact-h4'];
+contentPara[5].innerText = siteContent['contact']['address'];
+contentPara[6].textContent = siteContent['contact']['phone'];
+contentPara[7].innerText = siteContent['contact']['email'];
+console.log(contentPara);
+
+//footer
+contentPara[8].innerText = siteContent['footer']['copyright'];
